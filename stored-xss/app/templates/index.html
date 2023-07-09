@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stored XSS - LearnCyber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/credits.css?notpartofthechallenge" rel="stylesheet" />
+    <link href="/static/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="m-auto">
+        <h1 class="mb-3">Stored XSS</h1>
+        <p class="mb-5">{{payload | safe}}</p>
+    <form method="post">
+        <textarea class="form-control" id="payload" name="payload" rows="5"></textarea>
+        <button type="submit" class="btn btn-outline-light mt-3 w-100">Click me!</button>
+    </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/eeaba7a5c6.js"></script>
+    <script src="/static/credits.js?notpartofthechallenge"></script>
+    <script src="/static/main.js"></script>
+</body>
+
+</html>
