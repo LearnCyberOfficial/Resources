@@ -10,10 +10,12 @@ db = mysql.connector.connect(
   password="password"
 )
 
-cursor = db.cursor()
+cursor = db.cursor(buffered=True)
 
 try:
-    cursor.execute("CREATE TABLE users (username VARCHAR(255), password VARCHAR(255)); INSERT INTO users (username, password) VALUES ('user', 'normalpassword'), ('admin', 'supersecurepassword');")
+    cursor.execute("CREATE TABLE users (username VARCHAR(255), password VARCHAR(255));")
+    cursor.execute("INSERT INTO users (username, password) VALUES ('user', 'normalpassword'), ('admin', 'supersecurepassword');")
+    db.commit()
 except:
     pass
 
