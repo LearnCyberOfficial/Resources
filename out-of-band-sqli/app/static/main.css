@@ -1,0 +1,12 @@
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(13, 15, 41);
+    color: white;
+    text-align: center;
+    display: flex;
+    height: 100vh;
+}
